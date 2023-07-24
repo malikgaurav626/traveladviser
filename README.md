@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/00f28aaf-33d6-4f8b-a431-a8cd48544593/deploy-status)](https://app.netlify.com/sites/travelg101/deploys)
 
-![TravelAdvisor](https://drive.google.com/file/d/1ndoSuEIZlyoQ2Dxk_-9oT09x3r334gBl/view?usp=sharing)
+[![TravelAdvisor](https://i.postimg.cc/rwjDZYy6/android-chrome-512x512.png)](https://postimg.cc/LJq4nDZv)
 
 TravelAdvisor is a beautiful, modern, and minimalist React app designed to help you discover and plan your next travel adventure. It leverages the power of Rapid API Travel Advisor and Google Maps JavaScript API to provide you with valuable information about hotels, restaurants, and activities at your chosen destination. The app also includes a responsive Google Map to visualize your travel plans and explore various locations.
 
