@@ -1,38 +1,333 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+@font-face {
+  font-family: 'Trip Sans Ultra';
+  src: local('Trip Sans Ultra'), local('TripSans-Ultra'),
+      url('../public/fonts/TripSans-Ultra.eot?#iefix') format('embedded-opentype'),
+      url('../public/fonts/TripSans-Ultra.woff2') format('woff2'),
+      url('../public/fonts/TripSans-Ultra.woff') format('woff'),
+      url('../public/fonts/TripSans-Ultra.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Trip Sans';
+  src: local('Trip Sans Bold'), local('TripSans-Bold'),
+      url('../public/fonts/TripSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../public/fonts/TripSans-Bold.woff2') format('woff2'),
+      url('../public/fonts/TripSans-Bold.woff') format('woff'),
+      url('../public/fonts/TripSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Trip Sans';
+  src: local('Trip Sans Medium'), local('TripSans-Medium'),
+      url('../public/fonts/TripSans-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../public/fonts/TripSans-Medium.woff2') format('woff2'),
+      url('../public/fonts/TripSans-Medium.woff') format('woff'),
+      url('../public/fonts/TripSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@font-face {
+  font-family: 'Trip Sans Mono';
+  src: local('Trip Sans Mono Regular'), local('TripSansMono-Regular'),
+      url('../public/fonts/TripSansMono-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../public/fonts/TripSansMono-Regular.woff2') format('woff2'),
+      url('../public/fonts/TripSansMono-Regular.woff') format('woff'),
+      url('../public/fonts/TripSansMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trip Sans';
+  src: local('Trip Sans Regular'), local('TripSans-Regular'),
+      url('../public/fonts/TripSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../public/fonts/TripSans-Regular.woff2') format('woff2'),
+      url('../public/fonts/TripSans-Regular.woff') format('woff'),
+      url('../public/fonts/TripSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+body{
+  background-color: #ffffff;
+  font-family: 'Trip Sans';
+  padding: 0;
+  margin: 0;
+  padding-left: 2%;
+  padding-right: 2%;
+  
+}
+::-webkit-scrollbar{
+  width: 3px;
+}
+::-webkit-scrollbar-track{
+  background-color: #ffffff00;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(0, 0, 0);
+}
+#dateImgId{
+  width: 15px;
+  height: auto;
+  margin: 4px;
+}
+#dateBtnId{
+  border-radius: 40px;
+  border: 1px solid rgba(128, 128, 128, 0.549);
+  font-weight: bold;
+  box-shadow: 0px 0px 0.2px 0.1px grey;
+}
+#searchFieldContainerId{
+  width: 50%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#searchFieldSubContainerId{
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+#searchFieldFormId{
+  width: 100%;
+  justify-content: center;
+}
+#searchFieldId{
+  font-family: 'Trip Sans';
+  font-size: small;
+  border-radius: 40px;
+  border: 1px solid rgba(169, 169, 169, 0);
+  height: 38px;
+  width: 100%;
+  padding-left: 40px;
+  background-image: url('../public/search.png'); /* Replace with your actual search icon image */
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 12px;
+  letter-spacing: 0.1px;
+  outline: none;
+  transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+#searchFieldId:focus{
+  border: 1px solid grey;
+  transition: 0.2s;
+}
+.autocomplete-container{
+  width: 100%;
+}
+.navbar{
+  background-color: white !important;
+}
+#filterBtnId{
+  border: 1px solid rgba(128, 128, 128, 0.529);
+  box-shadow: 0px 0px 0.2px 0.1px grey;
+  font-weight: bold !important;
+  font-size: x-small;
+}
+#attractionBtnId{
+  border: 2px solid black;
+}
+.navbar-brand{
+  font-family: 'Trip Sans Ultra';
+}
+.dropdown-menu{
+  width: 200px;
+}
+#bodyHrId{
+  color: rgba(128, 128, 128, 0.569);
+}
+.sliderKM{
+  font-size: xx-small;
+  font-weight: bold;
+}
+.sliderDist{
+  font-size: xx-small;
+}
+.sliderContainer{
+  background-color: aliceblue;
+  border-radius: 3px;
+}
+.attractionDropdown
+{
+  font-size: 10px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/* Custom CSS to center the dropdown menu on smaller displays */
+@media (max-width: 767.98px) {
+  .dropdown-menu {
+    position: static;
+    border: none;
+    width: 100%;
+  }
+}
+#searchOverlayId{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.519);
+  /* opacity: 0.5; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px);
+}
+#mainBodyId{
+  position: relative;
+}
+.row{
+  margin: 0;
+  padding: 0;
+}
+.compatibleList{
+font-family: 'Trip Sans';
+list-style-type: none;
+padding-left: 0;
+
+}
+.rating{
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px;
+  color: rgb(51,51,51);
+}
+.interestpoints{
+  color: rgb(51,51,51);
+  font-family: 'Trip Sans';
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+.card-title{
+  font-size: small;
+  font-weight: bold;
+}
+.card-img{
+  border-radius: 0px;
+}
+.card{
+  border: none;
+}
+.card-body{
+  margin-left: 5px;
+}
+.address
+{
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  margin-bottom: 5px;
+  color: rgb(51,51,51);
+}
+.carouseltoggles{
+  margin: 0;
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 50%;
+  transform: translate(0px,20px);
+}
+#leftSectionId
+{
+  height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Circle styles */
+.circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px; /* Adjust as needed for spacing between circles */
+}
+
+/* Filled circle style */
+.filled-circle {
+  background-color:#159b69; 
+}
+
+/* Half circle style */
+.half-circle {
+  border: 1px solid #159b69; 
+  background-image: conic-gradient(#159b69 50%, transparent 0);
+  transform: scaleX(-1);
+}
+
+/* Empty circle style */
+.empty-circle {
+  border: 1px solid #159b69; 
+}
+.awardMain{
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+}
+.awardImage{
+  border-radius: 3px;
+}
+#offcanvasDate{
+  height: 60vh;
+  margin-top: 100px;
+}
+#offcanvasFilter{
+  height: 60vh;
+  margin-top: 100px;
+  border: none;
+  background-color: rgba(255, 254, 254, 0.428);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+}
+.badge{
+  margin: 3px;
+  cursor: pointer;
+}
+.mail{
+  text-decoration: none;
+  margin-left: 5px;
+  color: red;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.mail:hover{
+  transform: translateY(-14px);
+  transition: 0.3s;
+}
+.tel{
+  text-decoration: none;
+  margin-left: 5px;
+  color: green;
+  font-weight: bold;
+}
+.hoverCard:hover .card-title{
+  color: red;
+}
+.offcanvas{
+  font-family: "Trip Sans";
+  font-weight: bold;
+}
+.loadingDiv{
+  width: 100%;
+  height: 66vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
