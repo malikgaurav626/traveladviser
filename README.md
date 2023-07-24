@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# TravelAdvisor React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/00f28aaf-33d6-4f8b-a431-a8cd48544593/deploy-status)](https://app.netlify.com/sites/travelg101/deploys)
 
-## Available Scripts
+![TravelAdvisor](https://drive.google.com/file/d/1ndoSuEIZlyoQ2Dxk_-9oT09x3r334gBl/view?usp=sharing)
 
-In the project directory, you can run:
+TravelAdvisor is a beautiful, modern, and minimalist React app designed to help you discover and plan your next travel adventure. It leverages the power of Rapid API Travel Advisor and Google Maps JavaScript API to provide you with valuable information about hotels, restaurants, and activities at your chosen destination. The app also includes a responsive Google Map to visualize your travel plans and explore various locations.
 
-### `npm start`
+[Visit Here](https://travelg101.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Bugs](#bugs)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Search for hotels, restaurants, and activities at your desired destination.
+- Utilize powerful filters to narrow down your search results.
+- Responsive Google Map to visualize your travel itinerary.
+- Modern and minimalist aesthetic design for an enhanced user experience.
 
-### `npm run build`
+## Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+TravelAdvisor relies on the following dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- "@react-google-maps/api": "^2.19.0"
+- "@reduxjs/toolkit": "^1.9.5"
+- "@testing-library/jest-dom": "^5.17.0"
+- "@testing-library/react": "^13.4.0"
+- "@testing-library/user-event": "^13.5.0"
+- "axios": "^1.4.0"
+- "google-map-react": "^2.2.1"
+- "lodash.debounce": "^4.0.8"
+- "rc-slider": "^10.2.1"
+- "react": "^18.2.0"
+- "react-date-picker": "^10.3.0"
+- "react-dom": "^18.2.0"
+- "react-loading": "^2.0.3"
+- "react-redux": "^8.1.1"
+- "react-scripts": "5.0.1"
+- "redux": "^4.2.1"
+- "web-vitals": "^2.1.4"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+Before running the TravelAdvisor app, make sure you have Node.js installed on your machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```git clone https://github.com/your-username/traveladvisor.git```
+```cd traveladvisor```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install the required dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```npm install```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Sign up for the Rapid API Travel Advisor service and obtain your API key.
 
-### Code Splitting
+2. Sign up for the Google Maps JavaScript API and get your API key.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Create a `.env` file in the root of your project and add your API keys:
 
-### Analyzing the Bundle Size
+```REACT_APP_T_API=YOUR_RAPID_API_KEY```
+```REACT_APP_G_API=YOUR_GOOGLE_MAPS_API_KEY```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Start the development server:
 
-### Making a Progressive Web App
+```npm start```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The app will be accessible at `http://localhost:3000`.
 
-### Advanced Configuration
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Upon opening TravelAdvisor in your web browser, you will be presented with an intuitive and user-friendly interface. Enter your desired destination in the search bar, and the app will fetch information about hotels, restaurants, and activities from Rapid API Travel Advisor. Use the provided filters to refine your search results based on your preferences.
 
-### Deployment
+The responsive Google Map will display the locations of the search results, allowing you to visualize your travel plans. Click on map markers or search results to view more details about each location.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Enjoy planning your dream vacation with TravelAdvisor!
 
-### `npm run build` fails to minify
+## Bugs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Mainly there is one bug that I'm working on right now,
+
+Sometimes when you load the app initially it gives out a runtime error, to fix the bug close the window and revisit the site.
+
+## Contributing
+
+Contributions to TravelAdvisor are welcome and encouraged! If you find any bugs, have feature requests, or want to make improvements, feel free to open issues and pull requests on the GitHub repository.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code as per the terms of the license.
