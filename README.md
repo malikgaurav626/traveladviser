@@ -1,6 +1,6 @@
 # TravelAdvisor React App
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/00f28aaf-33d6-4f8b-a431-a8cd48544593/deploy-status?branch=main)](https://app.netlify.com/sites/travelg101/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/00f28aaf-33d6-4f8b-a431-a8cd48544593/deploy-status?branch=Production)](https://app.netlify.com/sites/travelg101/deploys)
 
 
 [![TravelAdvisor](https://i.postimg.cc/jjfGdBDm/android-chrome-192x192.png)](https://postimg.cc/B8qhmYcB)
